@@ -9,7 +9,7 @@ puts 'deleting records'
 Restaurant.destroy_all
 
 5.times do
-  restaurant_seeds = Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: Restaurant::CATEGOREIES.sample)
+  restaurant_seeds = Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: Restaurant::CATEGORIES.sample)
   puts restaurant_seeds.name
 end
 
