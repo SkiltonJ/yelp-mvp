@@ -1,5 +1,12 @@
 <h1><%= @restaurant.name %></h1>
 <p>A <%= @restaurant.category %> restaurant at location: <%= @restaurant.address %></p>
 <%= "Phone number: #{@restaurant.phone_number}" if @restaurant.phone_number != nil %>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><div><%= review.content %></div>
+    <div>Rating: <%= review.rating %></div>
+    </li>
+  <% end %>
+</ul>
 <p><%= link_to 'Back to all restaurants page', restaurants_path %></p>
 <p><%= link_to 'Review this restaurant', new_restaurant_review_path(@restaurant.id) %></p>
