@@ -1,0 +1,3 @@
+<h1><%= @restaurant.name %></h1>
+<p>A <%= @restaurant.category %> restaurant at location: <%= @restaurant.address %></p>
+<%= "Phone number: #{@restaurant.phone_number}" if @restaurant.phone_number != nil %>
