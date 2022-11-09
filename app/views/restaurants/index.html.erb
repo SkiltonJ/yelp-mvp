@@ -1,9 +1,17 @@
-<h1>Restaurants list</h1>
-<ul>
-<% @restaurants.each do |restaurant| %>
-<li>
-<%= link_to restaurant.name, restaurant_path(restaurant) %>
-</li>
-<% end %>
-</ul>
-<%= link_to '✚ Add a new restaurant', new_restaurant_path %>
+<div class="container">
+  <div class="center">
+    <h1>FermentAsia.</h1>
+    <ul>
+      <div class="wrapper">
+        <% @restaurants.each do |restaurant| %>
+          <%= link_to restaurant_path(restaurant) do %>
+            <div class="list_items">
+              <li><%= restaurant.name %></li>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+  <%= link_to '✚ Add a new restaurant', new_restaurant_path %>
+</div>
